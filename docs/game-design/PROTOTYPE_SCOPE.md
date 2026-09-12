@@ -55,13 +55,17 @@ Comportamentos mínimos:
 
 ### Estrutura da tentativa
 
-* início de uma tentativa;
-* progressão por uma pequena sequência de áreas;
-* morte;
-* reinício;
-* condição simples de vitória.
+- início de uma run;
+- progressão por aproximadamente 3 a 5 salas curtas;
+- morte;
+- reinício da run inteira;
+- condição simples de vitória.
 
-A decisão entre reiniciar toda a run ou apenas um conjunto de salas permanece aberta.
+Ao morrer, o jogador retorna ao início da run.
+
+Persistem entre runs apenas os registros e alterações necessários ao sistema de consequências das mortes.
+
+Estados temporários, inimigos, posição do jogador, itens e efeitos temporários são reiniciados.
 
 ### Sistema de consequências da morte
 
@@ -220,9 +224,6 @@ a equipe deve verificar se o conteúdo atual já foi testado.
 
 ## 9. Decisões ainda pendentes
 
-* reinício da run completa ou conjunto de salas;
-* tamanho aproximado de uma run;
-* número de salas do primeiro protótipo;
 * primeiras consequências de morte;
 * primeiras armas;
 * objetivo final da run;

@@ -141,16 +141,26 @@ Exemplos conceituais:
 
 Esses exemplos representam possibilidades de design e não funcionalidades aprovadas para implementação.
 
-9. Estrutura da run
+## 9. Estrutura da run
 
-Ainda não definido.
+Ao morrer, o jogador reinicia a run inteira.
 
-Precisamos decidir se uma morte:
+A run inicial será curta, com aproximadamente 3 a 5 salas.
 
-- reinicia somente um conjunto de salas;
-- reinicia toda a run.
+### Reinicia entre runs
 
-A duração e quantidade de salas também permanecem abertas.
+- posição do jogador;
+- inimigos;
+- estados temporários das salas;
+- itens e efeitos temporários;
+- combate em andamento.
+
+### Persiste entre runs
+
+- registros necessários para o sistema de consequências das mortes;
+- alterações persistentes geradas por esse sistema.
+
+Metaprogressão, moedas, equipamentos mantidos e outros sistemas permanentes serão definidos posteriormente.
 
 10. Progressão
 
@@ -206,7 +216,6 @@ O protótipo deverá ajudar a responder principalmente:
 15. Questões em aberto
 
 - Nome do jogo.
-- Estrutura completa da run.
 - Quantidade de salas.
 - Progressão permanente ou somente por run.
 - Funcionamento exato das consequências das mortes.

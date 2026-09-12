@@ -25,26 +25,27 @@ Uma pessoa pode atuar em mais de uma área, mas cada responsabilidade deve possu
 ---
 
 ## 3. Matriz de responsabilidades
-
-| Área                              | Responsável principal              | Apoio                    | Entregável                                      | Dependências         |
-| --------------------------------- | ---------------------------------- | ------------------------ | ----------------------------------------------- | -------------------- |
-| Produção e organização            | Rodrigo                            | Equipe                   | Backlog, prioridades, decisões e acompanhamento | Definições da equipe |
-| Game design                       | Rodrigo                            | Gustavo, Rebeca, Juliana | Regras, mecânicas e balanceamento inicial       | Playtests            |
-| Level design                      | Gustavo                            | Rodrigo                  | Salas, rotas, obstáculos e situações de stealth | Mecânicas funcionais |
-| Programação de gameplay           | A definir entre Daniel e Guilherme | Outro programador        | Movimento, combate e interação do jogador       | Game design          |
-| Programação de IA e sistemas      | A definir entre Daniel e Guilherme | Outro programador        | Inimigos, stealth, run e sistemas relacionados  | Gameplay base        |
-| Sistema de consequências da morte | A definir entre Daniel e Guilherme | Rodrigo                  | Registro e aplicação das alterações entre runs  | Run, level design    |
-| Música                            | Daniel                             | Juliana                  | Música necessária para o protótipo              | Direção do jogo      |
-| Efeitos sonoros                   | Juliana                            | Daniel                   | Sons de combate, alerta, morte e interação      | Gameplay             |
-| Direção visual                    | A definir                          | Juliana, Rebeca          | Identidade visual mínima do protótipo           | Conceito             |
-| Arte de personagens               | A definir                          | Juliana, Rebeca          | Player e inimigos                               | Direção visual       |
-| Arte de cenário                   | A definir                          | Juliana, Rebeca, Gustavo | Tiles, obstáculos e elementos de sala           | Level design         |
-| UI/UX                             | A definir                          | Juliana, Rebeca, Rodrigo | HUD, menus e feedback visual                    | Gameplay             |
-| Playtesting                       | Rodrigo organiza                   | Todos                    | Sessões de teste e registro dos resultados      | Build jogável        |
-| Gerenciamento de builds           | A definir                          | Programadores            | Builds de teste                                 | Projeto estável      |
-| Revisão de Pull Requests          | Daniel e Guilherme                 | Rodrigo quando aplicável | Revisão técnica antes de merge                  | GitHub               |
-| Documentação                      | Rodrigo                            | Responsável de cada área | Registro de decisões e documentação mínima      | Trabalho concluído   |
-
+| Área                              | Responsável principal | Apoio                    | Entregável                                              | Dependências         |
+| --------------------------------- | --------------------- | ------------------------ | ------------------------------------------------------- | -------------------- |
+| Produção e organização            | Rodrigo               | Equipe                   | Backlog, prioridades, decisões e acompanhamento         | Definições da equipe |
+| Game design                       | Rodrigo               | Gustavo, Rebeca, Juliana | Regras, mecânicas e balanceamento inicial               | Playtests            |
+| Level design                      | Gustavo               | Rodrigo                  | Salas, rotas, obstáculos e situações de stealth         | Mecânicas funcionais |
+| Player                            | Daniel                | Guilherme                | Movimento, controles e interação básica do jogador      | Game design          |
+| Inimigos                          | Daniel                | Guilherme                | Patrulha, perseguição, ataque e comportamento básico    | Player, level design |
+| Stealth                           | Guilherme             | Daniel                   | Detecção, estados de alerta e regras de furtividade     | Inimigos, level design |
+| Combate                           | Guilherme             | Daniel                   | Combate corpo a corpo, à distância, armas e hitboxes    | Player, inimigos     |
+| Gerenciamento da run              | Guilherme             | Daniel                   | Início, progressão, morte, reinício e estado da run     | Level design         |
+| Sistema de consequências da morte | Guilherme             | Daniel, Rodrigo          | Registro e aplicação das alterações entre runs          | Run, level design    |
+| Música                            | Daniel                | Juliana                  | Música necessária para o protótipo                      | Direção do jogo      |
+| Efeitos sonoros                   | Juliana               | Daniel                   | Sons de combate, alerta, morte e interação              | Gameplay             |
+| Direção visual                    | A definir             | Juliana, Rebeca          | Identidade visual mínima do protótipo                   | Conceito             |
+| Arte de personagens               | A definir             | Juliana, Rebeca          | Player e inimigos                                       | Direção visual       |
+| Arte de cenário                   | A definir             | Juliana, Rebeca, Gustavo | Tiles, obstáculos e elementos de sala                   | Level design         |
+| UI/UX                             | A definir             | Juliana, Rebeca, Rodrigo | HUD, menus e feedback visual                            | Gameplay             |
+| Playtesting                       | Rodrigo organiza      | Todos                    | Sessões de teste e registro dos resultados              | Build jogável        |
+| Gerenciamento de builds           | A definir             | Daniel, Guilherme        | Builds de teste                                         | Projeto estável      |
+| Revisão de Pull Requests          | Daniel e Guilherme    | Rodrigo quando aplicável | Revisão técnica antes de merge                          | GitHub               |
+| Documentação                      | Rodrigo               | Responsável de cada área | Registro de decisões e documentação mínima              | Trabalho concluído   |
 ---
 
 ## 4. Responsabilidades específicas
@@ -72,27 +73,58 @@ Responsável por:
 * posicionamento inicial de inimigos;
 * situações de stealth;
 * integração entre level design e consequências das mortes.
+## Programação
 
-### Daniel e Guilherme
+### Daniel — Player e Inimigos
 
-Responsáveis pela programação.
+Responsável principal por:
 
-Antes da produção principal, devem dividir entre si pelo menos:
+- movimentação do jogador;
+- controles do jogador;
+- interação básica do player;
+- comportamento dos inimigos;
+- patrulha;
+- perseguição;
+- ataque dos inimigos;
+- integração entre player e inimigos.
 
-* gameplay do jogador;
-* combate;
-* IA;
-* stealth;
-* estrutura da run;
-* sistema de consequências das mortes.
+Daniel também será responsável pela música.
 
-A divisão deve evitar que os dois trabalhem frequentemente nos mesmos arquivos.
+As tarefas de programação necessárias ao marco atual terão prioridade sobre produção musical extensa.
 
-### Daniel
+### Guilherme — Stealth, Run e Combate
 
-Além da programação, será responsável pela música.
+Responsável principal por:
 
-A música não deve bloquear tarefas prioritárias de programação.
+- sistema de stealth;
+- detecção do jogador;
+- estados de alerta;
+- gerenciamento da run;
+- morte e reinício;
+- registro das mortes;
+- sistema de consequências entre runs;
+- combate corpo a corpo;
+- combate à distância;
+- sistema base de armas;
+- hitbox/hurtbox relacionados ao combate.
+
+### Trabalho compartilhado
+
+Daniel e Guilherme podem:
+
+- revisar Pull Requests;
+- colaborar na correção de bugs;
+- discutir arquitetura;
+- auxiliar em sistemas que possuam dependências entre si.
+
+O responsável principal de cada sistema continua sendo quem garante que ele chegue ao estado de concluído.
+
+### Regras de colaboração
+
+- Evitar editar simultaneamente a mesma cena ou script.
+- Sistemas compartilhados devem possuir um responsável principal.
+- Alterações que afetem diretamente o sistema do outro programador devem ser alinhadas antes do merge.
+- Pull Requests devem ser revisados preferencialmente pelo outro programador.
 
 ### Juliana
 
