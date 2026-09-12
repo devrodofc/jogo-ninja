@@ -6,6 +6,8 @@ Engine: Godot
 Formato: Jogo 2D top-down
 Modo: Single-player
 
+---
+
 1. Conceito
 
 Jogo roguelite/roguelike furtivo top-down em que o jogador controla um ninja que possui apenas 1 HP.
@@ -29,6 +31,8 @@ Essas alterações podem:
 
 Os efeitos específicos ainda serão definidos.
 
+---
+
 2. Fantasia do jogador
 
 O jogador assume o papel de um ninja extremamente vulnerável, mas rápido e perigoso.
@@ -36,6 +40,8 @@ O jogador assume o papel de um ninja extremamente vulnerável, mas rápido e per
 Ele deve observar o ambiente, planejar sua abordagem e executar suas ações com precisão.
 
 O objetivo é criar situações em que combate direto seja possível, mas nem sempre seja a melhor alternativa.
+
+---
 
 3. Pilares de design
 
@@ -59,6 +65,8 @@ Furtividade
 
 Evitar ser detectado deverá ser uma alternativa importante ao combate direto.
 
+---
+
 4. Loop principal
 
 1. Entrar em uma área.
@@ -76,6 +84,8 @@ Caso o jogador seja atingido:
 4. Uma consequência relacionada à morte poderá aparecer em uma tentativa futura.
 5. O jogador adapta sua estratégia às mudanças.
 
+---
+
 5. Combate
 
 O combate será uma mistura de:
@@ -86,6 +96,8 @@ O combate será uma mistura de:
 A intenção futura é possuir diferentes armas.
 
 Para o primeiro protótipo, a quantidade e os tipos de armas ainda não estão definidos.
+
+---
 
 6. Inimigos
 
@@ -102,6 +114,8 @@ Eles deverão conseguir, inicialmente:
 
 Tipos adicionais de inimigos serão definidos somente após a validação da mecânica principal.
 
+---
+
 7. Sistema de morte
 
 O jogador possui exatamente 1 HP.
@@ -116,6 +130,8 @@ A morte deve possuir:
 - reinício rápido.
 
 A morte não funciona apenas como punição. Ela também alimenta o sistema de alterações entre tentativas.
+
+---
 
 8. Consequências das mortes
 
@@ -141,6 +157,8 @@ Exemplos conceituais:
 
 Esses exemplos representam possibilidades de design e não funcionalidades aprovadas para implementação.
 
+---
+
 ## 9. Estrutura da run
 
 Ao morrer, o jogador reinicia a run inteira.
@@ -162,6 +180,8 @@ A run inicial será curta, com aproximadamente 3 a 5 salas.
 
 Metaprogressão, moedas, equipamentos mantidos e outros sistemas permanentes serão definidos posteriormente.
 
+---
+
 10. Progressão
 
 Ainda não definido.
@@ -181,17 +201,29 @@ O protótipo será single-player.
 
 Modo cooperativo para dois jogadores permanece como possibilidade futura e não faz parte do escopo atual.
 
-12. Plataforma
+---
 
-Plataformas consideradas:
+## 12. Plataforma
 
-- Windows;
-- Linux;
+### Plataforma principal
+
+- Windows.
+
+### Plataforma secundária
+
+- Linux.
+
+### Plataformas opcionais ou futuras
+
 - macOS;
 - navegador;
 - Android.
 
-A plataforma principal de desenvolvimento ainda precisa ser oficialmente definida.
+macOS dependerá da disponibilidade de hardware para testes.
+
+Web e Android serão avaliados somente após a validação do protótipo principal.
+
+---
 
 13. Hipótese do protótipo
 
@@ -200,6 +232,8 @@ Proposta atual:
 A combinação de morte instantânea, furtividade e alterações causadas pelas mortes anteriores pode criar um ciclo interessante de aprendizado, adaptação e estratégia.
 
 A hipótese ainda deverá ser validada e refinada pela equipe.
+
+---
 
 14. O que o primeiro protótipo precisa descobrir
 
@@ -212,6 +246,8 @@ O protótipo deverá ajudar a responder principalmente:
 - As consequências das mortes realmente influenciam novas estratégias?
 - Encontrar novamente uma alteração causada por uma morte anterior é interessante?
 - O jogador percebe que suas runs anteriores estão modificando o jogo?
+
+---
 
 15. Questões em aberto
 
