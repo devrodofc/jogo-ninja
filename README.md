@@ -1,0 +1,1 @@
+Versão Godot - 4.7.1.stable
