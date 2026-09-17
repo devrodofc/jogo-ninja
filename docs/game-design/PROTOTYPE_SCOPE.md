@@ -149,7 +149,22 @@ Registrar, mas não implementar durante a primeira validação.
 
 ---
 
-## 5. Fora do escopo atual
+### 5. Plataformas
+
+O protótipo terá Windows como plataforma principal.
+
+Linux será utilizado como plataforma secundária para desenvolvimento e testes.
+
+Ficam fora do escopo inicial:
+
+- suporte garantido a macOS;
+- versão Web;
+- versão Android;
+- publicação simultânea em múltiplas plataformas.
+
+---
+
+## 6. Fora do escopo atual
 
 * multiplayer;
 * coop para dois jogadores;
@@ -169,7 +184,7 @@ Android permanece fora do primeiro escopo até que a equipe decida se o jogo ser
 
 ---
 
-## 6. Critérios mínimos para considerar o protótipo jogável
+## 7. Critérios mínimos para considerar o protótipo jogável
 
 O protótipo estará pronto para playtest quando um jogador conseguir:
 
@@ -185,7 +200,7 @@ O protótipo estará pronto para playtest quando um jogador conseguir:
 
 ---
 
-## 7. Critérios de validação
+## 8. Critérios de validação
 
 Ainda precisam ser aprovados pela equipe.
 
@@ -201,7 +216,7 @@ Sugestões para o primeiro playtest:
 
 ---
 
-## 8. Regras de controle de escopo
+## 9. Regras de controle de escopo
 
 Uma nova funcionalidade só entra no protótipo se:
 
@@ -222,7 +237,7 @@ a equipe deve verificar se o conteúdo atual já foi testado.
 
 ---
 
-## 9. Decisões ainda pendentes
+## 10. Decisões ainda pendentes
 
 * primeiras consequências de morte;
 * primeiras armas;
